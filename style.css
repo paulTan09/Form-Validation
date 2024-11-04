@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+}
+body {
+    display: flex;
+    background-color: black;
+    background-image: url(background.jpg)
+}
+
+
+/* LOGO */
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35vw;
+    height: 100vh;
+ /* RESIST TEXT SELECTION @ LOGO */
+    user-select: none;          /* Modern browsers */
+    -webkit-user-select: none;  /* Safari/WebKit/Chromium pre-`17 */
+    -moz-user-select: none;     /* Firefox/Gecko pre-`18 */
+    -ms-user-select: none;      /* IE10+/Edge pre-`18 */
+    
+
+}
+#logoHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+#logoImg {
+    width: 50px;
+    height: 50px;
+    background-image: url(Black_Mesa_logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+#logoText {
+    margin-left: 10px;
+    font-size: 1.2em;
+    font-family: arial, -apple-system, BlinkMacSystemFont, "avenir next", avenir, "segoe ui", "helvetica neue", helvetica, Cantarell, Ubuntu, roboto, noto, sans-serif; 
+    color: black;
+    font-weight: bold;
+}
+
+
+/* FORM */ 
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    width: 65vw;
+    height: 100vh;
+}
+
+/* FORM HEADER */
+#formHeader {
+    height: 25vh;
+    background-color: #f8f9fa;
+    text-align: left;
+    padding: 30px;
+}
+#formHeader p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    line-height: 1.5;
+}
+#formHeader em {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* FORM MID SECTION */
+#formMid {
+    position: relative;
+    height: 50vh;
+    background-color: #ffff;
+    text-align: left;
+    padding: 30px;
+    box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.15);
+}
+#formMid form {
+    display: flex;
+    flex-direction: column;
+}
+.form-row {
+    display: flex;
+    gap: 5%;
+    padding: 10px;
+}
+.form-row div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+label {
+    font-size: 1em;
+}
+input {
+    border-radius: 10px;
+    min-width: 200px;
+    height: 25px;
+    padding: 3px;
+}
+input:invalid {
+    border: 2px solid red;
+}
+input:valid {
+    border: 2px solid #1646ea;
+}
+
+/* FOOTER */
+#formFooter {
+    height: 25vh;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 30px;
+}
+#submitBtn {
+    color: whitesmoke;
+    background-color: #1646ea;
+    border-radius: 20px;
+    border: none;
+    height: 45px;
+    width: 250px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    transition: background-color 0.3s;
+}
+#submitBtn:hover {
+    background-color: #0c2470;
+}
+a {
+    color: #1646ea;
+}
+#pwdReq {
+    text-align: left;
+    padding-top: 18px;
+}
+#pwdReqUL {
+    text-align: left;
+    padding-top: 4px;
+}
+
+
+/* SCREEN SIZE */
+@media (max-width: 800px) {
+    .form-row {
+        flex-direction: column;
+    }
+}
